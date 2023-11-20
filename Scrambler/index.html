@@ -3,22 +3,25 @@
 <head>
     <title>Scrambler</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Remove 'interest-cohort' from Permissions-Policy -->
-    <meta http-equiv="Permissions-Policy" content="">
 
 </head>
 <body>
-    <script>
-        function makeAPICall() {
-            // Make API call using JavaScript
-            // ...
-            
-            // Once data is received, call the Android interface method
-            Android.onDataReceived("API response data");
-        }
-    </script>
+<script>
+   function makeAPICall() {
+     try {
+       alert("Function makeAPICall is invoked");
+       // Make API call using JavaScript
+       // ...
+
+       // Once data is received, call the Android interface method
+       Android.onDataReceived("API response data");
+     } catch (error) {
+       console.error("An error occurred:", error.message);
+     }
+   }
+
+</script>
+
 </body>
 </html>
